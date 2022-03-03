@@ -1,0 +1,26 @@
+{
+  "name": "custom-qgroundcontrol",
+  "version": "1.0.0",
+  "description": "[![Releases](https://img.shields.io/github/release/mavlink/QGroundControl.svg)](https://github.com/mavlink/QGroundControl/releases) [![Travis Build Status](https://travis-ci.org/mavlink/qgroundcontrol.svg?branch=master)](https://travis-ci.org/mavlink/qgroundcontrol) [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/crxcm4qayejuvh6c/branch/master?svg=true)](https://ci.appveyor.com/project/mavlink/qgroundcontrol)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JinRIIS/CustomQGC.git"
+  },
+  "keywords": [
+    "QGroundControl"
+  ],
+  "author": "Jin Zhu",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/JinRIIS/CustomQGC/issues"
+  },
+  "homepage": "https://github.com/JinRIIS/CustomQGC#readme"
+}
