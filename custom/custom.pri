@@ -30,18 +30,18 @@ CONFIG  += QGC_DISABLE_APM_PLUGIN_FACTORY
 DEFINES += CUSTOMHEADER=\"\\\"CustomCorePlugin.h\\\"\"
 DEFINES += CUSTOMCLASS=CustomCorePlugin
 
-TARGET   = AUVSIQGroundControl
-DEFINES += QGC_APPLICATION_NAME='"\\\"AUVSI QGroundControl\\\""'
+TARGET   = CustomQGroundControl
+DEFINES += QGC_APPLICATION_NAME='"\\\"Custom QGroundControl\\\""'
 
 DEFINES += QGC_ORG_NAME=\"\\\"qgroundcontrol.org\\\"\"
 DEFINES += QGC_ORG_DOMAIN=\"\\\"org.qgroundcontrol\\\"\"
 
-QGC_APP_NAME        = "AUVSI QGroundControl"
-QGC_BINARY_NAME     = "AUVSIQGroundControl"
-QGC_ORG_NAME        = "AUVSI"
-QGC_ORG_DOMAIN      = "org.auvsi"
-QGC_ANDROID_PACKAGE = "org.auvsi.qgroundcontrol"
-QGC_APP_DESCRIPTION = "AUVSI QGroundControl"
+QGC_APP_NAME        = "Custom QGroundControl"
+QGC_BINARY_NAME     = "CustomQGroundControl"
+QGC_ORG_NAME        = "Custom"
+QGC_ORG_DOMAIN      = "org.custom"
+QGC_ANDROID_PACKAGE = "org.custom.qgroundcontrol"
+QGC_APP_DESCRIPTION = "Custom QGroundControl"
 QGC_APP_COPYRIGHT   = "Copyright (C) 2020 QGroundControl Development Team. All rights reserved."
 
 # Our own, custom resources
@@ -55,8 +55,6 @@ QML_IMPORT_PATH += \
 SOURCES += \
     $$PWD/src/AccessType.cpp \
     $$PWD/src/AccessTypeConfig.cpp \
-    $$PWD/src/CustomAPMFirmwarePlugin.cc \
-    $$PWD/src/CustomAPMFirmwarePluginFactory.cc \
     $$PWD/src/CustomFirmwarePluginFactory.cc \
     $$PWD/src/CustomPX4FirmwarePlugin.cc \
     $$PWD/src/CustomCorePlugin.cc \
@@ -66,8 +64,6 @@ SOURCES += \
 HEADERS += \
     $$PWD/src/AccessType.h \
     $$PWD/src/AccessTypeConfig.h \
-    $$PWD/src/CustomAPMFirmwarePlugin.h \
-    $$PWD/src/CustomAPMFirmwarePluginFactory.h \
     $$PWD/src/CustomFirmwarePluginFactory.h \
     $$PWD/src/CustomPX4FirmwarePlugin.h \
     $$PWD/src/CustomCorePlugin.h \

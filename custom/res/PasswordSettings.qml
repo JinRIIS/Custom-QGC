@@ -16,7 +16,7 @@ Rectangle {
     readonly property real _margins: ScreenTools.defaultFontPixelHeight
     property string currentAccessType: QGroundControl.corePlugin.accessType
 
-    QGCPalette { 
+    QGCPalette {
         id: qgcPal
         colorGroupEnabled: true
     }

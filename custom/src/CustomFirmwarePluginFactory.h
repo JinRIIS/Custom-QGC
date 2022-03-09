@@ -21,3 +21,4 @@ private:
 extern CustomFirmwarePluginFactory CustomFirmwarePluginFactoryImp;
 
 #endif // CUSTOMFIRMWAREPLUGINFACTORY_H
+

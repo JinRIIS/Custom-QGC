@@ -1,4 +1,4 @@
-//#pragma once
+// #pragma once
 #include "CustomCorePlugin.h"
 #include "QmlComponentInfo.h"
 #include "AccessTypeConfig.h"
@@ -75,7 +75,7 @@ CustomCorePlugin::createQmlApplicationEngine(QObject *parent) {
     AccessType currentAccessType = getInitialUserAccessType();
     this->setAccessType(
         QString::fromStdString(accessTypeString(currentAccessType)));
-    
+
     PasscodeManager *passcodeManager = new PasscodeManager();
 
     engine->rootContext()->setContextProperty("CustomCorePlugin", this);
