@@ -27,6 +27,8 @@
         <file alias="SubChecklist.qml">src/FlightDisplay/SubChecklist.qml</file>
     </qresource>
     <qresource prefix="/qml">
+        <file alias="QGroundControl/Controls/QGCHorizontalSlider.qml">../src/QmlControls/QGCHorizontalSlider.qml</file>
+        <file alias="QGroundControl/Controls/QGCVerticalSlider.qml">../src/QmlControls/QGCVerticalSlider.qml</file>
         <file alias="QGroundControl/Controls/HeightIndicator.qml">src/QmlControls/HeightIndicator.qml</file>
         <file alias="QGroundControl/Controls/QGCDynamicObjectManager.qml">src/QmlControls/QGCDynamicObjectManager.qml</file>
         <file alias="QGroundControl/Controls/QGCOptionsComboBox.qml">src/QmlControls/QGCOptionsComboBox.qml</file>

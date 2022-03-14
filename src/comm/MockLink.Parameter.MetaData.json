@@ -2501,6 +2501,28 @@
       "increment": 0.05
     },
     {
+        "name": "COM_RC_YAW_OFF",
+        "type": "Float",
+        "default": 15,
+        "group": "Commander",
+        "shortDesc": "Maximum Yaw Offset",
+        "longDesc": "If the flight mode is in orbit mode or mission mode, when the slider is moved, the maxium degree offset for the yaw is +- 15 degrees.",
+        "min": 0,
+        "max": 360,
+        "units": "deg"
+    },
+    {
+        "name": "RC_YAW_OFF",
+        "type": "Float",
+        "default": 0 ,
+        "group": "Mission",
+        "shortDesc": "Current Yaw Offset",
+        "longDesc": "The current offset of the yaw",
+        "min": -360,
+        "max": 360,
+        "units": "deg"
+    },
+    {
       "name": "COM_REARM_GRACE",
       "type": "Int32",
       "default": 1,

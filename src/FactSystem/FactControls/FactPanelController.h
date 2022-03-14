@@ -27,6 +27,8 @@ class FactPanelController : public QObject
 {
     Q_OBJECT
 public:
+    Q_INVOKABLE void setParameterFact (int componentId, const QString&, float value);
+    
     FactPanelController();
 
     Q_PROPERTY(Vehicle* vehicle MEMBER _vehicle CONSTANT)

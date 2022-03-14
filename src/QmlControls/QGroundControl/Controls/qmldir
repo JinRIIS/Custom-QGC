@@ -61,6 +61,7 @@ QGCDynamicObjectManager                 1.0 QGCDynamicObjectManager.qml
 QGCFileDialog                           1.0 QGCFileDialog.qml
 QGCFlickable                            1.0 QGCFlickable.qml
 QGCGroupBox                             1.0 QGCGroupBox.qml
+QGCHorizontalSlider                     1.0 QGCHorizontalSlider.qml
 QGCLabel                                1.0 QGCLabel.qml
 QGCListView                             1.0 QGCListView.qml
 QGCMapCircleVisuals                     1.0 QGCMapCircleVisuals.qml
@@ -85,6 +86,7 @@ QGCTabButton                            1.0 QGCTabButton.qml
 QGCTextField                            1.0 QGCTextField.qml
 QGCToolBarButton                        1.0 QGCToolBarButton.qml
 QGCToolInsets                           1.0 QGCToolInsets.qml
+QGCVerticalSlider                       1.0 QGCVerticalSlider.qml
 QGCViewDialog                           1.0 QGCViewDialog.qml
 QGCViewDialogContainer                  1.0 QGCViewDialogContainer.qml
 QGCViewMessage                          1.0 QGCViewMessage.qml

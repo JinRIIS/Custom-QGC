@@ -44,7 +44,21 @@
       <min>5</min>
       <max>1000</max>
       <unit>1/s^2</unit>
+    </parameter>     
+    <parameter name="COM_RC_YAW_OFF" default="15" type="FLOAT">
+        <short_desc>Maximum Yaw Offset</short_desc>
+        <long_desc> If the flight mode is in orbit mode or mission mode, when the slider is moved, the maximum degree offset for the yaw is +- 15degrees.</long_desc>
+        <min>0</min>
+        <max>360</max>
+        <unit>deg</unit>
     </parameter>
+    <parameter name="RC_YAW_OFF" default="0" type="FLOAT">
+        <short_desc>Current Yaw Offset</short_desc>
+        <long_desc>The current offset of the yaw</long_desc>
+        <min>-360</min>
+        <max>360</max>
+        <unit>deg</unit>
+    </parameter>   
     <parameter name="esc_index" default="0" type="INT32">
       <short_desc>Index of this ESC in throttle command messages.</short_desc>
       <long_desc>Index of this ESC in throttle command messages.</long_desc>

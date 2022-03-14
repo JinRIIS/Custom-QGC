@@ -74,6 +74,15 @@ Fact* FactPanelController::getParameterFact(int componentId, const QString& name
     }
 }
 
+void FactPanelController::setParameterFact(int componentId, const QString& name, float value)
+{
+    if (_vehicle && _vehicle->parameterManager()->parameterExists(componentId, name)) {
+        Fact* fact = _vehicle->parameterManager()->getParameter(componentId, name);
+        QQmlEngine::setObjectOwnership(fact, QQmlEngine::CppOwnership);
+        fact->setCookedValue(value);
+    }
+}
+
 bool FactPanelController::parameterExists(int componentId, const QString& name)
 {
     return _vehicle ? _vehicle->parameterManager()->parameterExists(componentId, name) : false;
