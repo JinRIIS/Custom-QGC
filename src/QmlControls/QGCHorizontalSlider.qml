@@ -12,6 +12,7 @@ import QtQuick                      2.3
 import QtQuick.Controls             1.2
 import QtQuick.Controls.Styles      1.4
 import QtQuick.Controls.Private     1.0
+
 import QGroundControl               1.0
 import QGroundControl.FactSystem    1.0
 import QGroundControl.FactControls  1.0
@@ -43,7 +44,7 @@ Slider {
     property bool zeroCentered: true
     property bool displayValue: true
     property real maximum:      if (controller.getParameterFact(-1, "COM_RC_YAW_OFF", false) === null)
-                                    15
+                                    90
                                 else
                                     controller.getParameterFact(-1, "COM_RC_YAW_OFF", false).value
     property real minimum:      (maximum) * -1
@@ -84,13 +85,13 @@ Slider {
             }
 
             Label {
-            property real degrees:      value
-            text:                       degrees.toFixed(2)
-            visible:                    _root.displayValue
-            anchors.bottom:             parent.top
-            anchors.horizontalCenter:   parent.horizontalCenter
-            font.family:                ScreenTools.normalFontFamily
-            font.pointSize:             ScreenTools.mediumFontPointSize
+                property real degrees:      value
+                text:                       degrees.toFixed(2)
+                visible:                    _root.displayValue
+                anchors.bottom:             parent.top
+                anchors.horizontalCenter:   parent.horizontalCenter
+                font.family:                ScreenTools.normalFontFamily
+                font.pointSize:             ScreenTools.mediumFontPointSize
             }
         }
     }
