@@ -331,7 +331,7 @@ public:
 
     // Called when the message drop-down is invoked to clear current count
     Q_INVOKABLE void resetMessages();
-
+    
     Q_INVOKABLE void virtualTabletJoystickValue(double roll, double pitch, double yaw, double thrust);
 
     /// Command vehicle to return to launch
@@ -379,6 +379,9 @@ public:
 
     /// Alter the current mission item on the vehicle
     Q_INVOKABLE void setCurrentMissionSequence(int seq);
+    
+//    /// custom set parameter by user input
+//    Q_INVOKABLE void setParameterFact (int componentId, const QString&, float value);
 
     /// Reboot vehicle
     Q_INVOKABLE void rebootVehicle();

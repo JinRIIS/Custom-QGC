@@ -45,7 +45,7 @@
       <max>1000</max>
       <unit>1/s^2</unit>
     </parameter>     
-    <parameter name="COM_RC_YAW_OFF" default="90" type="FLOAT">
+    <parameter name="COM_RC_YAW_OFF" default="60" type="FLOAT">
         <short_desc>Maximum Yaw Offset</short_desc>
         <long_desc> If the flight mode is in orbit mode or mission mode, when the slider is moved, the maximum degree offset for the yaw is +- 15degrees.</long_desc>
         <min>0</min>

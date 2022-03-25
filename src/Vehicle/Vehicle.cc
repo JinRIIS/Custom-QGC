@@ -2566,7 +2566,7 @@ void Vehicle::guidedModeOrbit(const QGeoCoordinate& centerCoord, double radius, 
                     true,                           // show error if fails
                     static_cast<float>(radius),
                     static_cast<float>(qQNaN()),    // Use default velocity
-                    //0,                              // Vehicle points to center
+//                    0,                              // Vehicle points to center
                     4,                              // tell the drone which ORBIT_YAW_BEHAVIOR to use
                     static_cast<float>(qQNaN()),    // reserved
                     centerCoord.latitude(), centerCoord.longitude(), static_cast<float>(amslAltitude));
@@ -2577,7 +2577,7 @@ void Vehicle::guidedModeOrbit(const QGeoCoordinate& centerCoord, double radius, 
                     true,                           // show error if fails
                     static_cast<float>(radius),
                     static_cast<float>(qQNaN()),    // Use default velocity
-                    //0,                              // Vehicle points to center
+//                    0,                              // Vehicle points to center
                     4,                              // tell the drone which ORBIT_YAW_BEHAVIOR to use
                     static_cast<float>(qQNaN()),    // reserved
                     static_cast<float>(centerCoord.latitude()),

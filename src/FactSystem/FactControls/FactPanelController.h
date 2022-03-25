@@ -27,12 +27,12 @@ class FactPanelController : public QObject
 {
     Q_OBJECT
 public:
-    Q_INVOKABLE void setParameterFact (int componentId, const QString&, float value);
+
     
     FactPanelController();
 
     Q_PROPERTY(Vehicle* vehicle MEMBER _vehicle CONSTANT)
-
+    Q_INVOKABLE void    setParameterFact    (int componentId, const QString&, float value);
     Q_INVOKABLE Fact*   getParameterFact    (int componentId, const QString& name, bool reportMissing = true);
     Q_INVOKABLE bool    parameterExists     (int componentId, const QString& name);
 
