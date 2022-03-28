@@ -413,9 +413,11 @@ FlightMap {
         mapControl:     parent
         mapCircle:      _mapCircle
         visible:        false
+        z:              -1
 
         property alias center:              _mapCircle.center
         property alias clockwiseRotation:   _mapCircle.clockwiseRotation
+        property real  oldRadius
         readonly property real defaultRadius: 30
 
         Connections {
@@ -439,10 +441,12 @@ FlightMap {
 
         function actionConfirmed() {
             // Live orbit status is handled by telemetry so we hide here and telemetry will show again.
+            oldRadius = _mapCircle.radius.rawValue
             hide()
         }
 
         function actionCancelled() {
+            _mapCircle.radius.rawValue = oldRadius
             hide()
         }
 
@@ -502,12 +506,20 @@ FlightMap {
         anchorPoint.x:  sourceItem.anchorPointX
         anchorPoint.y:  sourceItem.anchorPointY
         coordinate:     _activeVehicle ? _activeVehicle.orbitMapCircle.center : QtPositioning.coordinate()
+        z:              1
         visible:        orbitTelemetryCircle.visible
 
         sourceItem: MissionItemIndexLabel {
             checked:    true
             index:      -1
-            label:      qsTr("Orbit", "Orbit waypoint")
+            label: {
+                    if (orbitMapCircle.oldRadius < 1)
+                        qsTr((1 * 3.28084).toFixed(4) + " ft")
+                    else if (orbitMapCircle.oldRadius > 100)
+                        qsTr((100 * 3.28084).toFixed(4) + " ft")
+                    else
+                        qsTr((orbitMapCircle.oldRadius * 3.28084).toFixed(4) + " ft")
+            }
         }
     }
 
@@ -534,6 +546,15 @@ FlightMap {
                 onTriggered: {
                     orbitMapCircle.show(clickMenu.coord)
                     globals.guidedControllerFlyView.confirmAction(globals.guidedControllerFlyView.actionOrbit, clickMenu.coord, orbitMapCircle)
+                }
+            }
+            QGCMenuItem {
+                text:           qsTr("Orbit at vehicle location")
+                visible:        globals.guidedControllerFlyView.showOrbit
+
+                onTriggered: {
+                    orbitMapCircle.show(_activeVehicleCoordinate)
+                    globals.guidedControllerFlyView.confirmAction(globals.guidedControllerFlyView.actionOrbit, _activeVehicleCoordinate, orbitMapCircle)
                 }
             }
             QGCMenuItem {

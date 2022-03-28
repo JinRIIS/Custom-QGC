@@ -32,8 +32,9 @@ public:
     FactPanelController();
 
     Q_PROPERTY(Vehicle* vehicle MEMBER _vehicle CONSTANT)
-    Q_INVOKABLE void    setParameterFact    (int componentId, const QString&, float value);
+    
     Q_INVOKABLE Fact*   getParameterFact    (int componentId, const QString& name, bool reportMissing = true);
+    Q_INVOKABLE void    setParameterFact    (int componentId, const QString&, float value);
     Q_INVOKABLE bool    parameterExists     (int componentId, const QString& name);
 
     /// Queries the vehicle for parameters which were not available on initial download but should be available now.

@@ -27,8 +27,6 @@
         <file alias="SubChecklist.qml">src/FlightDisplay/SubChecklist.qml</file>
     </qresource>
     <qresource prefix="/qml">
-        <file alias="QGroundControl/Controls/QGCHorizontalSlider.qml">src/QmlControls/QGCHorizontalSlider.qml</file>
-        <file alias="QGroundControl/Controls/QGCVerticalSlider.qml">src/QmlControls/QGCVerticalSlider.qml</file>
         <file alias="QGroundControl/Controls/HeightIndicator.qml">src/QmlControls/HeightIndicator.qml</file>
         <file alias="QGroundControl/Controls/QGCDynamicObjectManager.qml">src/QmlControls/QGCDynamicObjectManager.qml</file>
         <file alias="QGroundControl/Controls/QGCOptionsComboBox.qml">src/QmlControls/QGCOptionsComboBox.qml</file>
@@ -154,6 +152,8 @@
         <file alias="QGroundControl/Controls/QGCPipState.qml">src/QmlControls/QGCPipState.qml</file>
         <file alias="QGroundControl/Controls/QGCRadioButton.qml">src/QmlControls/QGCRadioButton.qml</file>
         <file alias="QGroundControl/Controls/QGCSlider.qml">src/QmlControls/QGCSlider.qml</file>
+        <file alias="QGroundControl/Controls/QGCHorizontalSlider.qml">src/QmlControls/QGCHorizontalSlider.qml</file>
+        <file alias="QGroundControl/Controls/QGCVerticalSlider.qml">src/QmlControls/QGCVerticalSlider.qml</file>
         <file alias="QGroundControl/Controls/QGCSwitch.qml">src/QmlControls/QGCSwitch.qml</file>
         <file alias="QGroundControl/Controls/QGCTabBar.qml">src/QmlControls/QGCTabBar.qml</file>
         <file alias="QGroundControl/Controls/QGCTabButton.qml">src/QmlControls/QGCTabButton.qml</file>

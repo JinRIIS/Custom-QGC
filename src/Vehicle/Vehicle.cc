@@ -2565,8 +2565,7 @@ void Vehicle::guidedModeOrbit(const QGeoCoordinate& centerCoord, double radius, 
                     MAV_FRAME_GLOBAL,
                     true,                           // show error if fails
                     static_cast<float>(radius),
-                    static_cast<float>(qQNaN()),    // Use default velocity
-//                    0,                              // Vehicle points to center
+                    static_cast<float>(qQNaN()),    // Use default velocity 
                     4,                              // tell the drone which ORBIT_YAW_BEHAVIOR to use
                     static_cast<float>(qQNaN()),    // reserved
                     centerCoord.latitude(), centerCoord.longitude(), static_cast<float>(amslAltitude));
@@ -2576,8 +2575,7 @@ void Vehicle::guidedModeOrbit(const QGeoCoordinate& centerCoord, double radius, 
                     MAV_CMD_DO_ORBIT,
                     true,                           // show error if fails
                     static_cast<float>(radius),
-                    static_cast<float>(qQNaN()),    // Use default velocity
-//                    0,                              // Vehicle points to center
+                    static_cast<float>(qQNaN()),    // Use default velocity 
                     4,                              // tell the drone which ORBIT_YAW_BEHAVIOR to use
                     static_cast<float>(qQNaN()),    // reserved
                     static_cast<float>(centerCoord.latitude()),
@@ -3204,6 +3202,8 @@ QString Vehicle::firmwareVersionTypeString() const
 
 void Vehicle::_rebootCommandResultHandler(void* resultHandlerData, int /*compId*/, MAV_RESULT commandResult, MavCmdResultFailureCode_t failureCode)
 {
+    /// Q_UNUSED(progress)
+
     Vehicle* vehicle = static_cast<Vehicle*>(resultHandlerData);
 
     if (commandResult != MAV_RESULT_ACCEPTED) {

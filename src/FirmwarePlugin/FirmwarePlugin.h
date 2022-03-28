@@ -68,6 +68,11 @@ public:
     ///     value:  remapParamNameMinorVersionRemapMap_t entry
     typedef QMap<int, remapParamNameMinorVersionRemapMap_t> remapParamNameMajorVersionMap_t;
 
+    /// Maps from firmware major version number to remapParamNameMinorVersionRemapMap_t entry
+    ///     key:    firmware major version
+    ///     value:  remapParamNameMinorVersionRemapMap_t entry
+    /// typedef QMap<int, remapParamNameMinorVersionRemapMap_t> remapParamNameMajorVersionMap_t;
+
     /// @return The AutoPilotPlugin associated with this firmware plugin. Must be overridden.
     virtual AutoPilotPlugin* autopilotPlugin(Vehicle* vehicle);
 

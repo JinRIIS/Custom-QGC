@@ -53,6 +53,7 @@ QML_IMPORT_PATH += \
 
 # Our own, custom sources
 SOURCES += \
+    $$PWD/src/CustomPlugin.cc \
     $$PWD/src/AccessType.cpp \
     $$PWD/src/AccessTypeConfig.cpp \
     $$PWD/src/CustomFirmwarePluginFactory.cc \
@@ -62,6 +63,7 @@ SOURCES += \
 
 
 HEADERS += \
+    $$PWD/src/CustomPlugin.h \
     $$PWD/src/AccessType.h \
     $$PWD/src/AccessTypeConfig.h \
     $$PWD/src/CustomFirmwarePluginFactory.h \
