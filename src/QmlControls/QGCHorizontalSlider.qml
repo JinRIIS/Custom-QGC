@@ -49,13 +49,13 @@ Slider {
                                     controller.getParameterFact(-1, "COM_RC_YAW_OFF", false).value
     property real minimum:      (maximum) * -1
     
-    Component.onCompleted: {
-        console.debug("The value of controller.getParameterFact = " + controller.getParameterFact(-1, "COM_RC_YAW_OFF", false));
-        console.debug("The value of controller.setParameterFact = " + controller.setParameterFact(-1, "RC_YAW_OFF", value));
-        console.debug("the value of real maximum = " + maximum);
-        console.debug("the value of real minimum = " + minimum);
-        console.debug("the value of onValueChanged = " + onValueChanged);
-    }
+//    Component.onCompleted: {
+//        console.debug("The value of controller.getParameterFact = " + controller.getParameterFact(-1, "COM_RC_YAW_OFF", false));
+//        console.debug("The value of controller.setParameterFact = " + controller.setParameterFact(-1, "RC_YAW_OFF", value));
+//        console.debug("the value of real maximum = " + maximum);
+//        console.debug("the value of real minimum = " + minimum);
+//        console.debug("the value of onValueChanged = " + onValueChanged);
+//    }
 
     style: SliderStyle {
         groove: Item {

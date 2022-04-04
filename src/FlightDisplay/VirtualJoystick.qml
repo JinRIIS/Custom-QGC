@@ -34,7 +34,7 @@ Item {
         running:    QGroundControl.settingsManager.appSettings.virtualJoystick.value && _activeVehicle
         repeat:     true
         onTriggered: {
-            if (_activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission")) {
+            if (_activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "RTL")) {
                 _activeVehicle.virtualTabletJoystickValue(rightStick.xAxis, rightStick.yAxis, 0, pitchSlider.value)
             }else if (_activeVehicle) {
                 _activeVehicle.virtualTabletJoystickValue(rightStick.xAxis, rightStick.yAxis, leftStick.xAxis, leftStick.yAxis)
@@ -49,28 +49,33 @@ Item {
     
     QGCVerticalSlider {
         id:                 pitchSlider
-        enabled:            _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission")
-        visible:            _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission")
+        enabled:            _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return")
+        visible:            _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return")
         anchors.left:       parent.left
         anchors.bottom:     parent.bottom
+        anchors.leftMargin:     50
+        anchors.bottomMargin:   380
         height:             parent.height
         width:              parent.height/2
     }
     
     QGCHorizontalSlider {
         id:                     yawSlider
-        enabled:                _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission")
-        visible:                _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission")
-        anchors.left:           pitchSlider.right
-        anchors.leftMargin:     20
+        enabled:                _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return")
+        visible:                _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return")
+//        anchors.left:           pitchSlider.right
+        anchors.left:           parent.left
+        anchors.bottom:         parent.bottom
+        anchors.bottomMargin:   420
+        anchors.leftMargin:     150
         width:                  parent.height
         height:                 parent.height/2
         value:                  0
         
         QGCButton {
             id:                         resetZero
-            enabled:                    _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission")
-            visible:                    _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission")
+            enabled:                    _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return")
+            visible:                    _activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return")
             anchors.top:                yawSlider.bottom
             anchors.horizontalCenter:   yawSlider.horizontalCenter
             height:                     parent.height/2
@@ -83,8 +88,8 @@ Item {
 
     JoystickThumbPad {
         id:                     leftStick
-        enabled:                !(_activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission"))
-        visible:                !(_activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission"))    
+        enabled:                !(_activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return"))
+        visible:                !(_activeVehicle && (_activeVehicle.flightMode === "Orbit" || _activeVehicle.flightMode === "Mission" || _activeVehicle.flightMode === "Return"))
         anchors.leftMargin:     xPositionDelta
         anchors.bottomMargin:   -yPositionDelta
         anchors.left:           parent.left
